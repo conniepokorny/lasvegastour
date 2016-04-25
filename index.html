@@ -1,1 +1,99 @@
 hello world
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+<body>
+	<div id="map" style="height: 610px"></div>
+
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<script>
+var map = L.map('map').setView([38.000, -117.103], 7);
+
+		L.tileLayer('http://{s}.sm.mapstack.stamen.com/($60c9fe[@p],(watercolor,$8c6600[hsl-color])[@77],toner-lines,(streets-and-labels,$ff6600[hsl-color]))/{z}/{x}/{y}.png', {
+			maxZoom: 20,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			id: 'mapbox.streets'
+		}).addTo(map);
+      
+       var myIcon = L.icon({
+ iconUrl: 'http://tryimg.com/7/2016/03/03/RDvbc.png',  
+    iconSize: [55, 55]});
+ var myIconN = L.icon({
+ iconUrl: 'http://tryimg.com/7/2016/03/02/RD5mM.png',  
+    iconSize: [30, 30]});
+      var myIconA = L.icon({
+ iconUrl: 'http://tryimg.com/7/2016/03/03/RDWnw.png',  
+    iconSize: [55, 55]});
+    var myIconW = L.icon({
+ iconUrl: 'http://tryimg.com/7/2016/03/03/RDrA6.png',  
+    iconSize: [42, 42]});    
+        var myIconAL = L.icon({
+ iconUrl: 'http://tryimg.com/7/2016/03/03/RDxMJ.png',  
+    iconSize: [40, 40]});
+      var myIconCL = L.icon({
+ iconUrl: 'http://tryimg.com/7/2016/03/03/RDP8K.png',  
+    iconSize: [47, 47]});
+       var myIconT = L.icon({
+ iconUrl: 'http://tryimg.com/7/2016/03/03/RDVD4.png',  
+    iconSize: [40, 40]});
+      
+
+		L.marker([36.171, -115.15],{icon: myIcon}).addTo(map)			.bindPopup("<b>Las Vegas</b><br />The Beginning & The End.").openPopup();
+      	L.marker([37.233, -115.097],{icon: myIconW}).addTo(map)			.bindPopup("<b>Pahranagat Wildlife Refuge</b><br />Beautiful Photo Opportunities").openPopup();
+ 	L.marker([37.645, -115.747],{icon: myIconAL}).addTo(map)
+			.bindPopup("<b>Little A'Le'Inn</b><br />Extraterrestrial Highway").openPopup();
+      	L.marker([38.070, -117.233],{icon: myIconCL}).addTo(map)
+			.bindPopup("<b>The Clown Motel</b><br />Yes, The Clown Motel").openPopup();
+      	L.marker([36.302,-116.416],{icon: myIconT}).addTo(map)			.bindPopup("<b>Amargosa Opera House & Hotel</b><br />Death Valley Junction, CA").openPopup();
+     L.marker([38.81189, -114.23172],{icon: myIconN}).addTo(map)
+			.bindPopup("<b>Great Basin National Park</b><br />Excursion").openPopup(); 
+   L.marker([35.931, -116.926],{icon: myIconN}).addTo(map)
+			.bindPopup("<b>Death Valley National Park</b><br />Excursion").openPopup(); 
+   L.marker([37.298, -113.028],{icon: myIconN}).addTo(map)
+			.bindPopup("<b>Zion National Park</b><br />Excursion").openPopup();  
+   L.marker([37.865,-119.540],{icon: myIconN}).addTo(map)
+			.bindPopup("<b>Yosemite National Park</b><br />Excursion").openPopup();    
+         L.marker([37.2,-116.1],{icon: myIconA}).addTo(map)		.bindPopup("<b>CAUTION</b><br />Area51").openPopup();    
+      
+     
+      
+		L.circle([37.460, -115.750], 177500, {
+			color: '#844d6a',
+			fillColor: '#844d6a',
+			fillOpacity: 0.1
+		}).addTo(map).bindPopup("The Fabulous Las Vegas Circle Tour!");
+
+		//L.polygon([
+           //[36.302, -116.416],
+         //[36.171, -115.15],
+			//[37.233, -115.097],
+			//[37.645, -115.747],
+          //[38.070, -117.233], 
+         
+          //]).addTo(map).bindPopup("I am a polygon.");
+
+
+		var popup = L.popup();
+
+		function onMapClick(e) {
+			popup
+				.setLatLng(e.latlng)
+				.setContent("You clicked the map at " + e.latlng.toString())
+				.openOn(map);
+		}
+
+		map.on('click', onMapClick);
+
+	</script>
+</body>
+</html>
