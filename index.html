@@ -11,6 +11,17 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 </head>
 <body>
+	
+	<div id="sidebar">
+    <h1>leaflet-sidebar</h1>
+</div>
+var sidebar = L.control.sidebar('sidebar', {
+    position: 'left'
+});
+// Show sidebar
+sidebar.show();
+
+map.addControl(sidebar);
 	<div id="map" style="height: 610px"></div>
 
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
