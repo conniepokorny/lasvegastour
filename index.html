@@ -12,7 +12,12 @@
 </head>
 <body>
 	
-	<div id="sidebar">
+
+
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<script>
+	
+		<div id="sidebar">
     <h1>leaflet-sidebar</h1>
 </div>
 var sidebar = L.control.sidebar('sidebar', {
@@ -22,10 +27,8 @@ var sidebar = L.control.sidebar('sidebar', {
 sidebar.show();
 
 map.addControl(sidebar);
-	<div id="map" style="height: 610px"></div>
 
-	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-	<script>
+	<div id="map" style="height: 610px"></div>
 var map = L.map('map').setView([38.000, -117.103], 7);
 
 		L.tileLayer('http://{s}.sm.mapstack.stamen.com/($60c9fe[@p],(watercolor,$8c6600[hsl-color])[@77],toner-lines,(streets-and-labels,$ff6600[hsl-color]))/{z}/{x}/{y}.png', {
