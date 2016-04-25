@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-    <link rel="stylesheet" href="L.Control.Sidebar.css" />
+    <link rel="stylesheet" href="conniepokorny/lasvegastour/L.Control.Sidebar.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
 
     <style>
@@ -54,7 +54,7 @@
     <a href="https://github.com/Turbo87/leaflet-sidebar/"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-    <script src="L.Control.Sidebar.js"></script>
+    <script src="conniepokorny/lasvegastour/L.Control.Sidebar.js"></script>
 
     <script>
         var map = L.map('map');
@@ -71,15 +71,19 @@
         });
         map.addControl(sidebar);
 
-       
-       
+        setTimeout(function () {
+            sidebar.show();
+        }, 500);
+
+        var marker = L.marker([51.2, 7]).addTo(map).on('click', function () {
+            sidebar.toggle();
         });
 
      
-      
-    
     </script>
 </body>
 </html>
+
+
 
 
