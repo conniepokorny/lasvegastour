@@ -112,7 +112,12 @@
   // create popup contents
     var customPopup = "test<br/><img src='https://farm2.staticflickr.com/1566/24585649253_cdc4568552_h.jpg' alt='maptime logo gif' width='350px'/>";
     
-   
+   // specify popup options 
+    var customOptions =
+        {
+        'maxWidth': '500',
+        'className' : 'custom'
+        }
     
       
 
@@ -131,7 +136,7 @@
 			.bindPopup("<b>Zion National Park</b><br />Excursion").openPopup();  
    L.marker([37.865,-119.540],{icon: myIconN}).addTo(map)
 			.bindPopup("<b>Yosemite National Park</b><br />Excursion").openPopup();    
-         L.marker([37.2,-116.1],{icon: myIconA}).addTo(map)		.bindPopup(custompopup).addTo(map);   
+         L.marker([37.2,-116.1],{icon: myIconA}).addTo(map)		.bindPopup(custompopup,customoptions).addTo(map);   
       
      
       
