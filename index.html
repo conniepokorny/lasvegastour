@@ -77,7 +77,7 @@
             sidebar.show();
         }, 500);
 
-   L.marker([37.2,-116.1], icon: myIconA).addTo(map).on('click', function () {
+   L.marker([37.2,-116.1], {icon: myIconA}).addTo(map).on('click', function () {
             sidebar.toggle();
             
               L.marker([37.2,-116.1],{icon: myIconA}).addTo(map)		.bindPopup("<b>CAUTION</b><br />Area51").openPopup();  
