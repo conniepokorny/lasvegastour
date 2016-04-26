@@ -108,6 +108,12 @@
        var myIconT = L.icon({
  iconUrl: 'http://tryimg.com/7/2016/03/03/RDVD4.png',  
     iconSize: [40, 40]});
+    
+  // create popup contents
+    var customPopup = "test<br/><img src='https://farm2.staticflickr.com/1566/24585649253_cdc4568552_h.jpg' alt='maptime logo gif' width='350px'/>";
+    
+   
+    
       
 
 		L.marker([36.171, -115.15],{icon: myIcon}).addTo(map)			.bindPopup("<b>Las Vegas</b><br />The Beginning & The End.").openPopup();
@@ -125,7 +131,7 @@
 			.bindPopup("<b>Zion National Park</b><br />Excursion").openPopup();  
    L.marker([37.865,-119.540],{icon: myIconN}).addTo(map)
 			.bindPopup("<b>Yosemite National Park</b><br />Excursion").openPopup();    
-         L.marker([37.2,-116.1],{icon: myIconA}).addTo(map)		.bindPopup("<b>CAUTION</b><br />Area51").openPopup();    
+         L.marker([37.2,-116.1],{icon: myIconA}).addTo(map)		.bindPopup(custompopup).openPopup();    
       
      
       
