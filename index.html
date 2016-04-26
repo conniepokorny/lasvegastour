@@ -77,11 +77,10 @@
             sidebar.show();
         }, 500);
 
-     
-     } 
-  }).addTo(map); 
- }); 
-
+   var myIconA = L.marker([37.2,-116.1]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });   
+ 
         
         
        var myIcon = L.icon({
